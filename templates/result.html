@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rezultat</title>
+</head>
+<body>
+    <h1>Scorul tău: {{ score }} / 20</h1>
+    <h2>Întrebările la care ai greșit:</h2>
+    <ul>
+        {% for item in wrong_answers %}
+            <li>{{ item['question'] }} - Răspuns corect: {{ item['correct_answer'] }}</li>
+        {% endfor %}
+    </ul>
+    <a href="/"><button>Reîncepe Quiz-ul</button></a>
+</body>
+</html>
